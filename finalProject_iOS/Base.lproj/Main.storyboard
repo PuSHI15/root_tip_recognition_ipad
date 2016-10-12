@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="htq-O4-Dtd"/>
+                        <viewControllerLayoutGuide type="bottom" id="FUv-VG-aFf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Nh-EX-Uen">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="980"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DVj-SQ-RDj" customClass="viewToDisplay">
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="980"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="P4G-qH-cLJ" appends="YES" id="dTs-bi-L7H"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tqa-iA-iqf">
+                                <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                                <items>
+                                    <barButtonItem title="Camera" width="91" id="ChO-lj-qaf">
+                                        <connections>
+                                            <action selector="invokeCamera:" destination="BYZ-38-t0r" id="FMx-Ya-yoK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="86" style="plain" systemItem="fixedSpace" id="cyQ-eM-UYZ"/>
+                                    <barButtonItem title="Learn" width="62" id="IMG-2m-Knk">
+                                        <connections>
+                                            <action selector="learnFeature:" destination="BYZ-38-t0r" id="lf9-So-cIQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="104" style="plain" systemItem="fixedSpace" id="e33-Kb-R4P"/>
+                                    <barButtonItem title="Predict" width="78" id="akY-wA-OSq">
+                                        <connections>
+                                            <action selector="predictRootTips:" destination="BYZ-38-t0r" id="CZX-IR-hqn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="96" style="plain" systemItem="fixedSpace" id="w0C-B7-olC"/>
+                                    <barButtonItem title="Save" id="1vM-hH-BOY">
+                                        <connections>
+                                            <action selector="saveImage:" destination="BYZ-38-t0r" id="wmc-88-0KX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Clear" id="PXl-82-4PN">
+                                        <connections>
+                                            <action selector="clearCanvas:" destination="BYZ-38-t0r" id="LJ2-Zt-UWn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="36" style="plain" systemItem="fixedSpace" id="tbb-eP-MkZ"/>
+                                    <barButtonItem title="Library" id="dlQ-bm-v7Z">
+                                        <connections>
+                                            <action selector="invokeLib:" destination="BYZ-38-t0r" id="eI8-i9-xIk"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="displayImage" destination="DVj-SQ-RDj" id="bFx-Xl-CdL"/>
+                        <outlet property="scrollView" destination="1Nh-EX-Uen" id="3gy-bm-PS1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="P4G-qH-cLJ">
+                    <connections>
+                        <action selector="showSelectionMenu:" destination="BYZ-38-t0r" id="gnp-rx-m2H"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1028" y="-78"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
